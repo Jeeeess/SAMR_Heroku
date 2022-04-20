@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel = "stylesheet" type = "text/css" href="/static/css/account.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fira+Sans+Condensed:wght@700;900&family=Inter:wght@600&family=Lato:wght@700&family=Oswald:wght@600&family=PT+Sans+Narrow:wght@700&family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <title>Update Profile</title>
+</head>
+
+<body class="bg-app">
+
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+
+            <h1 class="logo me-auto">SA<span>MR</span></h1>
+
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><span class="span">|</span></li>
+                    <li><a href="/movie">Movies</a></li>
+                    <li><span class="span">|</span></li>
+                    <li><a href="/watchlist">Watchlist</a></li>
+                    <li><span class="span">|</span></li>
+                    <li><a href="/sentiment">Sentiment Analysis</a></li>
+                    <li><span class="span">|</span></li>
+                    <li class="dropdown"><a href="#"><span>Account</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a class="active" href="/account">User Details</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                         </ul>
+                    </li>
+                    <li>
+                        <a class="welcome-message">
+                            {% if session['user_id'] %}
+                                <h4 class="welcome">Hi, {{ session['user_id'] }}</h4>
+                            {% endif %}
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!------Update Section----->
+        <section id="account" class="account">
+            <div class="edit-container">
+
+                <div class="col-lg-6" style="margin-left: 60px;">
+                    <div class="about-text">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="dark-color">Edit Profile</h3>
+                            </div>
+                        </div>
+                        <div class="row about-list">
+                            <form method="post" action="/edit_user">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="form-label">Username: </label>
+                                        <input type="text" name="username" id="username" placeholder="Username" value="{{ user[1] }}"required>
+
+                                        <label class="form-label">Email: </label>
+                                        <input type="email" name="email" id="email" placeholder="Email" value="{{ user[0] }}"readonly>
+                                        <p style="font-size: 14px; margin-top: 4px; font-weight: bold;">&#8727; Email cannot be changed.</p>
+
+                                        <label class="form-label">Password: </label>
+                                        <input type="text" name="password" id="password" placeholder="Password" value="{{ user[2] }}"required>
+
+                                        <label class="form-label">Gender: </label>
+                                        <select name="gender" aria-label="Default select example">
+                                            <option value="-" {% if user[5] =="-" %} selected {% endif %}>-</option>
+                                            <option value="Male" {% if user[5] =="Male" %} selected {% endif %}>Male</option>
+                                            <option value="Female" {% if user[5] =="Female" %} selected {% endif %}>Female</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="form-label">Last Name: </label>
+                                        <input type="text" name="lastname" id="lastname" placeholder="Last Name" value="{{ user[3] }}"required>
+
+                                        <label class="form-label">First Name: </label>
+                                        <input type="text" name="firstname" id="firstname" placeholder="First Name" value="{{ user[4] }}"required>
+
+                                        <label class="form-label">Interested Movie Genre: </label>
+                                        <select name="genre" aria-label="Default select example">
+                                            <option value="-" {% if user[6] =="-" %} selected {% endif %}>-</option>
+                                            <option value="Action" {% if user[6] =="Action" %} selected {% endif %}>Action</option>
+                                            <option value="Adventure" {% if user[6] =="Adventure" %} selected {% endif %}>Adventure</option>
+                                            <option value="Animation" {% if user[6] =="Animation" %} selected {% endif %}>Animation</option>
+                                            <option value="Biography" {% if user[6] =="Biography" %} selected {% endif %}>Biography</option>
+                                            <option value="Comedy" {% if user[6] =="Comedy" %} selected {% endif %}>Comedy</option>
+                                            <option value="Crime" {% if user[6] =="Crime" %} selected {% endif %}>Crime</option>
+                                            <option value="Drama" {% if user[6] =="Drama" %} selected {% endif %}>Drama</option>
+                                            <option value="Horror" {% if user[6] =="Horror" %} selected {% endif %}>Horror</option>
+                                            <option value="Romance" {% if user[6] =="Romance" %} selected {% endif %}>Romance</option>
+                                        </select>
+
+                                        <button class="button-update" type="submit">Update Profile</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" style="margin-left: 40px;">
+                    <div class="about-avatar">
+                        <img src="/static/asset/edit.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="fixed-bottom">
+
+        <div class="container d-md-flex py-4">
+              <div class="me-md-auto text-center text-md-start">
+
+                    <div class="copyright">
+                      &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
+                    </div>
+
+                    <div class="credits">
+                      <!-- All the links in the footer should remain intact. -->
+                      <!-- You can delete the links only if you purchased the pro version. -->
+                      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
+                      Designed by BootstrapMade
+                    </div>
+              </div>
+
+
+              <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="snapchat"><i class="bx bxl-snapchat"></i></a>
+              </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+.bg-app{
+    background-color: #f0f6ff;
+}
+
+/*------Header-----*/
+#header {
+  background: white;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 10px 0;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+#header .logo span {
+  color: #76b5c5;
+}
+
+.welcome-message{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: #111;
+    font-family: "Roboto", cursive;
+    margin-right: 60px;
+}
+
+/*-----Navigation Bar------*/
+.navbar{
+    padding: 0;
+}
+
+.navbar ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a, .navbar a:focus {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.span{
+    font-size: 20px;
+    display: flex;
+    line-height: 0;
+    margin-left: 18px;
+    margin-bottom: 5px;
+}
+
+.navbar a i, .navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  color: #76b5c5;
+}
+
+.dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.4s;
+  border-top: 2px solid #628dd1;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: none;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 16px;
+  margin-right: 10px;
+  color: black;
+}
+
+.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+  color: #76b5c5;
+}
+
+.navbar .dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+.welcome-message{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #111;
+    font-family: "Fira Sans Condensed", sans-serif;
+    margin-right: 15px;
+}
+
+.welcome{
+    font-size: 22px;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-weight: 400;
+    margin-top: 5px;
+    color: #7d807a;
+}
+
+/*-----Account Page-----*/
+section {
+    margin-top: 80px;
+    padding: 45px;
+    height: 570px;
+    width: 100%;
+}
+
+.account-container{
+    background-color: #fff;
+    width: 1000px;
+    height: 450px;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    padding: 10px;
+    margin-left: 230px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #fcf8f0;
+}
+
+.about-text{
+    width: 600px;
+}
+
+.about-text h3{
+  font-size: 45px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 5px;
+  padding: 5px;
+  color: #575e69;
+}
+
+.about-list{
+  padding-top: 5px;
+}
+
+.about-list .media{
+  padding: 10px 0;
+}
+
+.about-list label{
+  color: #20247b;
+  font-weight: 600;
+  width: 150px;
+  letter-spacing: 0.5px;
+  position: relative;
+  font-family: "Tahoma", sans-serif;
+  font-size: 18px;
+}
+
+.about-list p{
+  margin: 0;
+  font-size: 18px;
+  font-family: "Tahoma", sans-serif;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+    border-style: none;
+    width: 250px;
+    height: 250px;
+    opacity: 0.8;
+    padding: 20px;
+    margin-left: 80px;
+}
+
+.button{
+    padding: 15px 10px;
+    margin-top: 6px;
+    margin-left: 35px;
+    background-color: #fcbd90;
+    color: black;
+    transition: 0.4s;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: "Tahoma", sans-serif;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: #fa822d;
+    color: #fff;
+}
+
+/*-------Edit-------*/
+.edit-container{
+    background-color: #fff;
+    width: 1000px;
+    height: 450px;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    padding: 10px;
+    margin-left: 230px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #fce8e8;
+}
+
+.form-label{
+    margin-top: 10px;
+    color: #20247b;
+    font-weight: 600;
+    width: 200px;
+    letter-spacing: 0.5px;
+    font-family: "Tahoma", sans-serif;
+    font-size: 18px;
+}
+
+input{
+    background-color: transparent;
+    width: 180px;
+    color: black;
+    border: none;
+    border-bottom: 2px solid rgba(0,0,0,0.5);
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+}
+
+.input::placeholder{
+    color: black;
+    font-family: "Roboto", sans-serif;
+}
+
+input:focus{
+    color: black;
+    outline: none;
+    border-bottom: 2px solid rgba(0,0,0,0.5);
+    transition: 0.5s;
+}
+
+input:focus::placeholder{
+    opacity: 0;
+}
+
+select{
+    background-color: #f7b5b5;
+    width: 180px;
+    color: black;
+    border: none;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+}
+
+.button-update{
+    padding: 15px 15px;
+    margin-top: 25px;
+    margin-left: 16px;
+    background-color: #fab4c3;
+    color: black;
+    transition: 0.4s;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: "Tahoma", sans-serif;
+    font-weight: bold;
+}
+
+.button-update:hover{
+    background-color: #cf3e5d;
+    color: #fff;
+}
+
+/*-----Footer-----*/
+#footer {
+  color: #fff;
+  position: relative;
+  font-size: 17px;
+  background: #111;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+#footer .credits {
+  padding-top: 5px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: #76b5c5;
+}
+
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 10px;
+  border-radius: 4px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+  background: #76b5c5;
+  color: #fff;
+  text-decoration: none;
+}

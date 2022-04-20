@@ -1,0 +1,267 @@
+.bg-app{
+    background-color: #f0f6ff;
+}
+
+/*------Header-----*/
+#header {
+  background: white;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 10px 0;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+#header .logo span {
+  color: #76b5c5;
+}
+
+/*-----Navigation Bar------*/
+.navbar{
+    padding: 0;
+}
+
+.navbar ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a, .navbar a:focus {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.span{
+    font-size: 20px;
+    display: flex;
+    line-height: 0;
+    margin-left: 18px;
+    margin-bottom: 5px;
+}
+
+.navbar a i, .navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  color: #76b5c5;
+}
+
+.dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.4s;
+  border-top: 2px solid #628dd1;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: none;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 16px;
+  margin-right: 10px;
+  color: black;
+}
+
+.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+  color: #76b5c5;
+}
+
+.navbar .dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+.welcome-message{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #111;
+    font-family: "Fira Sans Condensed", sans-serif;
+    margin-right: 15px;
+}
+
+.welcome{
+    font-size: 22px;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-weight: 400;
+    margin-top: 5px;
+    color: #7d807a;
+}
+
+/*-----Watchlist Page-----*/
+section {
+    margin-top: 45px;
+    padding: 45px;
+    height: 590px;
+    width: 100%;
+}
+
+.section-bg {
+    background-color: #f7f8faec;
+}
+
+.section-title{
+    text-align: center;
+    padding-bottom: 30px;
+    margin-top: 15px;
+}
+
+.section-title h2{
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 5px;
+    padding-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    color: #111;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: #76b5c5;
+  bottom: 0;
+  left: calc(50% - 30px);
+}
+
+.box{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    left: calc(50% - 25px);
+}
+
+.watch-desc {
+    padding: 5px;
+    margin-bottom: 40px;
+    display: flex;
+    color: #5e5d5d;
+    font-family: "Tahoma", sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+.button{
+    padding: 15px 25px;
+    margin-top: 2%;
+    background-color: #badaff;
+    color: black;
+    transition: 0.4s;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Tahoma", sans-serif;
+    font-weight: bold;
+}
+
+.button:hover{
+    background-color: #8aafed;
+    color: #fff;
+}
+
+/*-----Footer-----*/
+#footer {
+  color: #fff;
+  position: relative;
+  font-size: 17px;
+  background: #111;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+#footer .credits {
+  padding-top: 5px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: #76b5c5;
+}
+
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 10px;
+  border-radius: 4px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+  background: #76b5c5;
+  color: #fff;
+  text-decoration: none;
+}

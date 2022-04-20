@@ -1,0 +1,370 @@
+.bg-app{
+    background-color: #f0f6ff;
+}
+
+/*------Header-----*/
+#header {
+  background: white;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 10px 0;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+#header .logo span {
+  color: #76b5c5;
+}
+
+/*-----Navigation Bar------*/
+.navbar{
+    padding: 0;
+}
+
+.navbar ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a, .navbar a:focus {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.span{
+    font-size: 20px;
+    display: flex;
+    line-height: 0;
+    margin-left: 18px;
+    margin-bottom: 5px;
+}
+
+.navbar a i, .navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  color: #76b5c5;
+}
+
+.dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.4s;
+  border-top: 2px solid #628dd1;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: none;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 16px;
+  margin-right: 10px;
+  color: black;
+}
+
+.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+  color: #76b5c5;
+}
+
+.navbar .dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+.welcome-message{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #111;
+    font-family: "Fira Sans Condensed", sans-serif;
+    margin-right: 15px;
+}
+
+.welcome{
+    font-size: 22px;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-weight: 400;
+    margin-top: 5px;
+    color: #7d807a;
+}
+
+/*-----Section General-----*/
+.section-bg{
+    background-color: #f7f8faec;
+}
+
+.section{
+    margin-top: 45px;
+    width: 100%;
+    padding: 45px;
+}
+
+.section-title{
+    text-align: center;
+    padding-bottom: 30px;
+    margin-top: 70px;
+}
+
+.section-title h2{
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 5px;
+    padding-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    color: #111;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: #76b5c5;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+/*-----Watchlist Page-----*/
+.movie-desc{
+    margin-top: 29px;
+    padding: 20px;
+}
+
+.list {
+    margin-bottom: 70px;
+    position: relative;
+    padding: 15px 15px;
+}
+
+.list .pic {
+    overflow: hidden;
+}
+
+.list .pic img{
+    width: 320px;
+    height: 400px;
+}
+
+.list .pic img:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.list .list-info {
+    position: absolute;
+    bottom: -55px;
+    left: 15px;
+    right: 15px;
+    background: #fff;
+    padding: 10px 10px;
+    color: #0f2b7a;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: 0.5s;
+    height: 120px;
+}
+
+.list h4 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #0f2b7a;
+    position: relative;
+    padding-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.list h4::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #7fa5c0;
+    bottom: 0;
+    left: 0;
+}
+
+.list span {
+    font-style: italic;
+    display: block;
+    font-size: 15px;
+    color: black;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.list .go{
+    margin-left: 0px;
+    font-size: 18px;
+    padding: 0 0;
+}
+
+.list .go:hover{
+    color: #3ea9fa;
+}
+
+.watchlist-remove{
+    padding: 9px 30px;
+    margin-top: 0.5px;
+    margin-left: 68px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background-color: #edb6b4;
+    border: 2px solid black;
+}
+
+.watchlist-remove:hover{
+    background-color: #9c0a05;
+    color: #fff;
+    border: 2px solid black;
+}
+
+/*-----Watchlist Empty-----*/
+.box{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    left: calc(50% - 25px);
+    height: 415px;
+}
+
+.watch-desc {
+    padding: 15px;
+    margin-bottom: 30px;
+    color: #5e5d5d;
+    font-family: "Tahoma", sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+.button{
+    padding: 15px 25px;
+    margin-top: 2%;
+    background-color: #badaff;
+    color: black;
+    transition: 0.4s;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Tahoma", sans-serif;
+    font-weight: bold;
+}
+
+.button:hover{
+    background-color: #8aafed;
+    color: #fff;
+}
+
+
+/*-----Footer-----*/
+#footer {
+    color: #fff;
+    position: relative;
+    font-size: 17px;
+    background: #111;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+}
+
+#footer .credits {
+    padding-top: 5px;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    color: #76b5c5;
+}
+
+#footer .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 10px;
+    border-radius: 4px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+    background: #76b5c5;
+    color: #fff;
+    text-decoration: none;
+}
